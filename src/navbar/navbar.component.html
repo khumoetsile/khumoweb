@@ -1,0 +1,15 @@
+<mat-toolbar color="primary" class="navbar">
+    <span class="navbar-logo">MyApp</span>
+    <span class="spacer"></span>
+    <button mat-button [matMenuTriggerFor]="servicesMenu">Services</button>
+    <a mat-button [routerLink]="'/home'">Home</a>
+    <a mat-button [routerLink]="'/about'">About</a>
+    <a mat-button [routerLink]="'/contact'">Contact</a>
+  
+    <mat-menu #servicesMenu="matMenu" [@menuAnimation]>
+      <button mat-menu-item [routerLink]="'/services/web-development'">Web Development</button>
+      <button mat-menu-item [routerLink]="'/services/app-development'">App Development</button>
+      <button mat-menu-item [routerLink]="'/services/seo'">SEO Optimization</button>
+    </mat-menu>
+  </mat-toolbar>
+  

@@ -1,13 +1,19 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterModule } from '@angular/router';
+import { NavbarComponent } from '../navbar/navbar.component';
+import { ArtworkComponent } from '../artwork/artwork.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [
+    RouterModule,
+    NavbarComponent,
+    ArtworkComponent
+  ],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'khumoweb';
+  title = 'my-angular-app';
 }
